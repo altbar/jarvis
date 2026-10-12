@@ -184,7 +184,7 @@ apt update && apt upgrade -y
 Три пакета, которые понадобятся установщику Hermes. Ставим их сейчас, чтобы завтра не искать причину:
 
 ```
-apt install -y libatomic1 ffmpeg ripgrep
+apt install -y git libatomic1 ffmpeg ripgrep
 ```
 
 > [!info] Зачем именно libatomic1

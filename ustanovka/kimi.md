@@ -77,27 +77,20 @@ tags:
 
 ## Шаг 5. Подключить к помощнику
 
-Агент, открой файл секретов Hermes, участник вставляет ключ руками:
+Участник присылает ключ агенту в чат, агент записывает его сам - `hermes config set` кладёт секрет в `~/.hermes/.env`, nano не нужен:
 
 ```
-nano ~/.hermes/.env
-```
-
-Строки:
-
-```
-ANTHROPIC_BASE_URL=https://api.kimi.com/coding/
-ANTHROPIC_API_KEY=твой_ключ
-```
-
-Сохранить `Ctrl+O`, `Enter`, выйти `Ctrl+X`. Дальше:
-
-```
+hermes config set ANTHROPIC_BASE_URL https://api.kimi.com/coding/
+hermes config set ANTHROPIC_API_KEY твой_ключ
+hermes config set model.provider anthropic
+hermes config set model.base_url https://api.kimi.com/coding/
 hermes config set model kimi-for-coding
 hermes gateway restart
 ```
 
-Проверка: спроси у помощника «какая у тебя сейчас модель».
+Адрес задаётся дважды намеренно: свежие версии Hermes берут его из `model.base_url`, старые - из `ANTHROPIC_BASE_URL`. Значение ключа агент в ответах не повторяет.
+
+Проверка: `hermes -z "какая у тебя сейчас модель?"`.
 
 **Что участник должен увидеть:** помощник отвечает, ошибок авторизации нет.
 

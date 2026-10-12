@@ -91,27 +91,20 @@ tags:
 
 ## Шаг 5. Подключить к помощнику на ноутбуке
 
-Агент, открой файл секретов Hermes и дай участнику вставить ключ руками:
+Участник присылает ключ агенту в чат, агент записывает его сам - `hermes config set` кладёт секрет в `~/.hermes/.env`, nano не нужен:
 
 ```
-nano ~/.hermes/.env
-```
-
-Строки:
-
-```
-ANTHROPIC_BASE_URL=https://api.minimax.io/anthropic
-ANTHROPIC_API_KEY=ключ_подписки
-```
-
-Сохранить `Ctrl+O`, `Enter`, выйти `Ctrl+X`. Дальше:
-
-```
+hermes config set ANTHROPIC_BASE_URL https://api.minimax.io/anthropic
+hermes config set ANTHROPIC_API_KEY ключ_подписки
+hermes config set model.provider anthropic
+hermes config set model.base_url https://api.minimax.io/anthropic
 hermes config set model MiniMax-M3
 hermes gateway restart
 ```
 
-Проверка: спроси у помощника «какая у тебя сейчас модель».
+Адрес задаётся дважды намеренно: свежие версии Hermes берут его из `model.base_url`, старые - из `ANTHROPIC_BASE_URL`. Значение ключа агент в ответах не повторяет.
+
+Проверка: `hermes -z "какая у тебя сейчас модель?"`.
 
 **Что участник должен увидеть:** помощник отвечает и называет модель MiniMax.
 
