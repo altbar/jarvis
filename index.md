@@ -58,7 +58,7 @@ description: Каталог всех материалов тренинга. Аг
 - `skills/bitrix24/vozmozhnosti-agenta.pdf` - Битрикс24 и агент: что умеет (продажи, звонки, действия в CRM, задачи, отчёты), чего не умеет через вебхук (роботы и триггеры), безопасность, готовые фразы
 - `ustanovka/skill-security.md` - скилл «аудит безопасности»: что торчит наружу, SSH, ключи, границы агента
 - `ustanovka/prezentacii-ai.md` - презентация без дизайнера: Gamma за 5 минут, свой агент из материалов волта, брендбук из Figma
-- `ustanovka/oplata-podpisok.md` - как оплатить подписки из России: три способа, проверенные лоты, правила чтобы аккаунт не отлетел
+- `ustanovka/oplata-podpisok.md` - как купить подписку на ИИ из России (проверено 11.10.2026): ChatGPT Plus, Claude Pro с рисками, MiniMax Go, OpenRouter; как не переплатить за способ оплаты; PDF-версия - `ustanovka/kak-kupit-podpiski-na-ii.pdf`
 - `ustanovka/minimax.md` - подписка MiniMax за 22 доллара: ключ подписки и подключение
 - `ustanovka/kimi.md` - подписка Kimi Code за 39 долларов: консоль ключей и подключение
 
